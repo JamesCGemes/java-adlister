@@ -14,7 +14,7 @@
     <body>
         <div>
             <h2>Log In</h2>
-            <form action="login.jsp" method="post">
+            <form action="/login.jsp" method="post">
                 <div>
                     <label for="username">Username</label>
                     <input id="username" name="username" class="form-control" type="text">
