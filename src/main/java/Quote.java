@@ -1,7 +1,6 @@
 public class Quote {
     private long id;
-    public String authorFirstName;
-    public String authorLastName;
+    public String Author;
     public String content;
 
 //    Zero argument constructor
@@ -18,20 +17,12 @@ public class Quote {
         this.id = id;
     }
 
-    public String getAuthorFirstName() {
-        return authorFirstName;
+    public String getAuthor() {
+        return Author;
     }
 
-    public void setAuthorFirstName(String authorFirstName) {
-        this.authorFirstName = authorFirstName;
-    }
-
-    public String getAuthorLastName() {
-        return authorLastName;
-    }
-
-    public void setAuthorLastName(String authorLastName) {
-        this.authorLastName = authorLastName;
+    public void setAuthor(String author) {
+        Author = author;
     }
 
     public String getContent() {

@@ -22,4 +22,6 @@ public class AlbumTest {
 
         System.out.println(smith.getAuthorLastName()+ " " + smith.getContent());
     }
+
+
 }
