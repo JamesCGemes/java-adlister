@@ -11,13 +11,16 @@ CREATE TABLE IF NOT EXISTS users(
     PRIMARY KEY (id)
 );
 
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS ads;
 
-CREATE TABLE IF NOT EXISTS users(
+CREATE TABLE IF NOT EXISTS ads(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id VARCHAR(255),
     title VARCHAR(255),
     description TEXT(255),
+    PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+
 
