@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads{
-        private Connection connection;
+        private Connection connection = null;
 
         public MySQLAdsDao(Config config) {
             try {
@@ -22,12 +22,13 @@ public class MySQLAdsDao implements Ads{
 
     @Override
     public List<Ad> all() {
+            Statement stmt = null;
         try {
-            Statement stmt = connection.createStatement();
+            stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM ads");
             return createAdsFromResults(rs);
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Error retrieving ads");
         }
     }
 
@@ -40,7 +41,7 @@ public class MySQLAdsDao implements Ads{
             rs.next();
             return rs.getLong(1);
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException("error creating ads");
         }
     }
 
