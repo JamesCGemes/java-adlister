@@ -22,7 +22,11 @@
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
-            <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input id="confirm_password" name="confirm_password" class="form-control" type="password">
+            </div>
+            <input type="submit" class="btn btn-primary btn-block" value="Create New User">
         </form>
     </div>
 </body>
